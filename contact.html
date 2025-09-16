@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Responsive Landing Page</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <section class="section contact-section">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <form>
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

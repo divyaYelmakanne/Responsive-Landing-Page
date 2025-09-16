@@ -1,0 +1,231 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-gradient);
+    transition: background 0.5s, color 0.5s;
+}
+
+/* Light mode variables */
+:root {
+    --bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #e0eafc 100%);
+    --text-color: #2c3e50;
+    --about-bg: #d4edda;
+    --contact-bg: #ffe5b4;
+    --footer-bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --btn-bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --btn-shadow: rgba(102, 126, 234, 0.4);
+    --btn-hover-shadow: rgba(102, 126, 234, 0.6);
+}
+
+/* Dark mode variables */
+body.dark-mode {
+    --bg-gradient: linear-gradient(135deg, #1e1e1e 0%, #3a3a3a 100%);
+    --text-color: #f0f0f0;
+    --about-bg: #2e4e2e;
+    --contact-bg: #7a4e1a;
+    --footer-bg-gradient: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    --btn-bg-gradient: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    --btn-shadow: rgba(118, 75, 162, 0.4);
+    --btn-hover-shadow: rgba(118, 75, 162, 0.6);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--btn-bg-gradient);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px var(--btn-shadow);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--btn-hover-shadow);
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+#mode-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: transform 0.3s;
+}
+
+#mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Sections */
+.hero-section {
+    background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.about-section {
+    background: var(--about-bg);
+    transition: background 0.5s;
+}
+
+.services-section {
+    background: #fff;
+}
+
+.contact-section {
+    background: var(--contact-bg);
+    transition: background 0.5s;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-section button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+.footer {
+    background: var(--footer-bg-gradient);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    transition: background 0.5s;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-links li {
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Rainbow text animation for h1 and h2 */
+@keyframes rainbow {
+    0%, 100% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    56% { color: blue; }
+    70% { color: indigo; }
+    84% { color: violet; }
+}
+
+h1, h2 {
+    animation: rainbow 5s linear infinite;
+}

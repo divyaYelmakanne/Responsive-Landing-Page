@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Landing Page</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+    <!-- Include Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <section id="hero" class="section hero-section">
+            <div class="container">
+                <h1>Welcome to Our Landing Page</h1>
+                <p>Your gateway to awesome services.</p>
+                <a href="#services" class="btn">Explore Services</a>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>We provide top-notch solutions to help your business grow.</p>
+            </div>
+        </section>
+
+        <section id="services" class="section services-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <ul>
+                    <li>Service One</li>
+                    <li>Service Two</li>
+                    <li>Service Three</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Get in touch for more information.</p>
+                <form>
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Load navbar and footer components dynamically
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
