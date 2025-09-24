@@ -1,5 +1,7 @@
 # Responsive Landing Page with Interactive Navigation
 
+Take a look at Live Website : https://responsive-landing-page-u323.vercel.app/
+
 This project is a responsive landing page featuring an interactive navigation menu that enhances user experience by dynamically changing its style when scrolling or hovering over menu items. The navigation menu remains fixed and visible across all sections/pages.
 
 ## Features
@@ -69,3 +71,4 @@ Responsive-Landing-Page/
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
+
